@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>justtestlah-demos</artifactId>
+  <name>JustTestLah! Demos</name>
+  <description>JustTestLah! is a JAVA test framework targeting projects that support multiple platforms, in particular Web, Android and iOS. It follows a BDD approach and allows testing against all platforms using the same feature files. JustTestLah's main aim is to make the configuration and the actual test code as easy as possible.</description>
+  <parent>
+    <groupId>io.github.martinschneider</groupId>
+    <artifactId>justtestlah-parent</artifactId>
+    <version>1.4</version>
+  </parent>
+  <dependencies>
+    <dependency>
+      <groupId>io.github.martinschneider</groupId>
+      <artifactId>justtestlah-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.martinschneider</groupId>
+      <artifactId>justtestlah-browserstack</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!-- Uncomment these lines for pCloudy support. Make sure to also install 
+      the pCloudy Java connector to your Maven repository! -->
+    <!-- <dependency> -->
+    <!-- <groupId>io.github.martinschneider</groupId> -->
+    <!-- <artifactId>justtestlah-pcloudy</artifactId> -->
+    <!-- <version>${project.version}</version> -->
+    <!-- </dependency> -->
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.trivago.rta</groupId>
+        <artifactId>cluecumber-report-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>report</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>reporting</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <sourceJsonReportDirectory>${project.build.directory}/report/cucumber</sourceJsonReportDirectory>
+          <generatedHtmlReportDirectory>${project.build.directory}/report/cucumber</generatedHtmlReportDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

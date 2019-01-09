@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>justtestlah-browserstack</artifactId>
+  <name>JustTestLah! Browserstack</name>
+  <description>JustTestLah! is a JAVA test framework targeting projects that support multiple platforms, in particular Web, Android and iOS. It follows a BDD approach and allows testing against all platforms using the same feature files. JustTestLah's main aim is to make the configuration and the actual test code as easy as possible.</description>
+  <parent>
+    <groupId>io.github.martinschneider</groupId>
+    <artifactId>justtestlah-parent</artifactId>
+    <version>1.4</version>
+  </parent>
+  <dependencies>
+    <dependency>
+      <groupId>io.github.martinschneider</groupId>
+      <artifactId>justtestlah-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+</project>

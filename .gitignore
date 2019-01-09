@@ -222,6 +222,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-cucumber.json
-**build**
-**report**
+
+**/report/**
+**/build/**
